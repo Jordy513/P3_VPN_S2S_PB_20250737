@@ -165,9 +165,9 @@ El laboratorio simula la interconexión segura de dos sitios corporativos a trav
 |---|---|---|---|---|---|---|
 | **ISP** | Router ISP | e0/0 | 192.168.1.2 | /24 | — | Enlace hacia R1 |
 | | | e0/1 | 192.168.1.2 | /24 | — | Enlace hacia R2 |
-| **R1** | Cisco IOS (Router) | e0/0 | 192.168.1.1 | /24 | 192.168.1.254 | Gateway WAN — Site A |
+| **R1** | Cisco IOS (Router) | e0/0 | 192.168.1.1 | /24 | 192.168.1.2 | Gateway WAN — Site A |
 | | | e0/1 | 20.25.37.129 | /25 | — | Gateway LAN — Site A |
-| **R2** | Cisco IOS (Router) | e0/0 | 192.168.1.2 | /24 | 192.168.1.254 | Gateway WAN — Site B |
+| **R2** | Cisco IOS (Router) | e0/0 | 192.168.1.2 | /24 | 192.168.1.2 | Gateway WAN — Site B |
 | | | e0/1 | 20.25.37.1 | /25 | — | Gateway LAN — Site B |
 | **SW1** | Cisco IOS (Switch L2) | — | — | — | — | Conmutación LAN Site A |
 | **SW2** | Cisco IOS (Switch L2) | — | — | — | — | Conmutación LAN Site B |
