@@ -23,7 +23,7 @@
    - [Configuración de PCs (Hosts)](#43-configuración-de-pcs-hosts)
 5. [Verificación del Túnel](#5-verificación-del-túnel)
 6. [Capturas de Pantalla](#6-capturas-de-pantalla)
-7. [Contramedidas y Consideraciones de Seguridad](#7-contramedidas-y-consideraciones-de-seguridad)
+7. [Consideraciones de Seguridad](#7-consideraciones-de-seguridad)
 8. [Video Demostrativo](#8-video-demostrativo)
 9. [Referencias](#9-referencias)
 
@@ -432,7 +432,7 @@ A continuación se detalla el índice de evidencias correspondientes a las fases
 
 ---
 
-## 7. Contramedidas y Consideraciones de Seguridad
+## 7. Consideraciones de Seguridad
 
 ### 7.1 Debilidades de IKEv1 en este laboratorio
 
