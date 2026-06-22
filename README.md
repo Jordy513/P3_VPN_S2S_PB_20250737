@@ -163,8 +163,8 @@ El laboratorio simula la interconexión segura de dos sitios corporativos a trav
 
 | Dispositivo | Tipo / Modelo | Interfaz | Dirección IP | Máscara | Gateway | Rol |
 |---|---|---|---|---|---|---|
-| **ISP** | Cisco IOS (Router) | e0/0 | 192.168.1.254 | /24 | — | Simulación de Internet |
-| | | e0/1 | 192.168.1.254 | /24 | — | Segundo enlace hacia R2 |
+| **ISP** | Router ISP | e0/0 | 192.168.1.2 | /24 | — | Internet |
+| | | e0/1 | 192.168.1.2 | /24 | — | Segundo enlace hacia R2 |
 | **R1** | Cisco IOS (Router) | e0/0 | 192.168.1.1 | /24 | 192.168.1.254 | Gateway WAN — Site A |
 | | | e0/1 | 20.25.37.129 | /25 | — | Gateway LAN — Site A |
 | **R2** | Cisco IOS (Router) | e0/0 | 192.168.1.2 | /24 | 192.168.1.254 | Gateway WAN — Site B |
