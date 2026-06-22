@@ -193,7 +193,7 @@ hostname R1
 ! ─── Interfaces ────────────────────────────────────────
 interface Ethernet0/0
  description WAN-hacia-ISP
- ip address 192.168.1.1 255.255.255.0
+ ip address 192.168.1.10 255.255.255.0
  no shutdown
 
 interface Ethernet0/1
@@ -202,7 +202,7 @@ interface Ethernet0/1
  no shutdown
 
 ! ─── Ruta por defecto hacia Internet (ISP) ─────────────
-ip route 0.0.0.0 0.0.0.0 192.168.1.254
+ip route 0.0.0.0 0.0.0.0 192.168.1.2
 
 ! ─── PASO 1: ISAKMP Policy — IKE Fase 1 ───────────────
 crypto isakmp policy 10
@@ -213,14 +213,13 @@ crypto isakmp policy 10
  lifetime 86400
 
 ! ─── Pre-Shared Key del peer remoto (R2) ───────────────
-crypto isakmp key J0rdyITLA2026! address 192.168.1.2
+crypto isakmp key JordyITLA2026! address 192.168.1.20
 
 ! ─── PASO 2: Transform Set — IKE Fase 2 (ESP) ─────────
 crypto ipsec transform-set TS_AES256_SHA256 esp-aes 256 esp-sha256-hmac
  mode tunnel
 
 ! ─── PASO 3: ACL — Tráfico Interesante ─────────────────
-! Define qué flujos IP activan y son protegidos por IPSec
 ip access-list extended ACL_IPSEC_TRAFFIC
  permit ip 20.25.37.128 0.0.0.127 20.25.37.0 0.0.0.127
 
@@ -250,7 +249,7 @@ hostname R2
 ! ─── Interfaces ────────────────────────────────────────
 interface Ethernet0/0
  description WAN-hacia-ISP
- ip address 192.168.1.2 255.255.255.0
+ ip address 192.168.1.20 255.255.255.0
  no shutdown
 
 interface Ethernet0/1
@@ -259,7 +258,7 @@ interface Ethernet0/1
  no shutdown
 
 ! ─── Ruta por defecto hacia Internet (ISP) ─────────────
-ip route 0.0.0.0 0.0.0.0 192.168.1.254
+ip route 0.0.0.0 0.0.0.0 192.168.1.2
 
 ! ─── PASO 1: ISAKMP Policy — IKE Fase 1 ───────────────
 crypto isakmp policy 10
@@ -270,7 +269,7 @@ crypto isakmp policy 10
  lifetime 86400
 
 ! ─── Pre-Shared Key del peer remoto (R1) ───────────────
-crypto isakmp key J0rdyITLA2026! address 192.168.1.1
+crypto isakmp key JordyITLA2026! address 192.168.1.1
 
 ! ─── PASO 2: Transform Set — IKE Fase 2 (ESP) ─────────
 crypto ipsec transform-set TS_AES256_SHA256 esp-aes 256 esp-sha256-hmac
