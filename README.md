@@ -127,10 +127,10 @@ El laboratorio simula la interconexión segura de dos sitios corporativos a trav
 ```
                               [ INTERNET / ISP ]
                               192.168.1.0/24
-                              (Router ISP: 192.168.1.254)
+                              (Router ISP: 192.168.1.2)
                                     │
                    ┌────────────────┴────────────────┐
-                   │ e0/0: 192.168.1.1               │ e0/0: 192.168.1.2
+                   │ e0/0: 192.168.1.10              │ e0/0: 192.168.1.20
            ┌───────┴───────┐                 ┌───────┴───────┐
            │  Router R1    │◄═══ TÚNEL ══════►  Router R2    │
            │  (Site A)     │   IPSec IKEv1   │  (Site B)     │
