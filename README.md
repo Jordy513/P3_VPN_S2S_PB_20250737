@@ -269,7 +269,7 @@ crypto isakmp policy 10
  lifetime 86400
 
 ! ─── Pre-Shared Key del peer remoto (R1) ───────────────
-crypto isakmp key JordyITLA2026! address 192.168.1.1
+crypto isakmp key JordyITLA2026! address 192.168.1.10
 
 ! ─── PASO 2: Transform Set — IKE Fase 2 (ESP) ─────────
 crypto ipsec transform-set TS_AES256_SHA256 esp-aes 256 esp-sha256-hmac
@@ -283,7 +283,7 @@ ip access-list extended ACL_IPSEC_TRAFFIC
 ! ─── PASO 4: Crypto Map ────────────────────────────────
 crypto map CMAP_SITEB 10 ipsec-isakmp
  description Tunel-IPSec-hacia-SiteA-R1
- set peer 192.168.1.1
+ set peer 192.168.1.10
  set transform-set TS_AES256_SHA256
  match address ACL_IPSEC_TRAFFIC
  set security-association lifetime seconds 3600
