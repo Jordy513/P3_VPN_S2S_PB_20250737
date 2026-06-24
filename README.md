@@ -464,11 +464,9 @@ Para un entorno de producción se recomienda migrar a IKEv2 (`crypto ikev2 propo
 
 ## 8. Video Demostrativo
 
-🎥 **[Ver demostración en YouTube](#)**
+🎥 **[Ver demostración en YouTube](https://youtu.be/Lhje4-EdfbM)**
 
-> *(Enlace disponible en `videos.txt` en la raíz del repositorio)*
-
-**Duración:** máximo 8 minutos
+**Duración:** 6:22 
 
 **Contenido del video:**
 
