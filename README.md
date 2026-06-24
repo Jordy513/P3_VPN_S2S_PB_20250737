@@ -476,7 +476,7 @@ Para un entorno de producción se recomienda migrar a IKEv2 (`crypto ikev2 propo
 * ✅ Demostración de los scripts de configuración aplicados en R1 y R2.
 * ✅ Verificación de `show crypto isakmp sa` mostrando estado `QM_IDLE`.
 * ✅ Verificación de `show crypto ipsec sa` con contadores de paquetes activos.
-* ✅ Ping exitoso extremo a extremo entre PC1 (`20.25.37.130`) y PC3/PC4 (`20.25.37.2/3`).
+* ✅ Ping exitoso extremo a extremo entre PC1 (`20.25.37.130`) y PC3 (`20.25.37.2`).
 
 ---
 
